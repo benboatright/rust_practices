@@ -10,3 +10,28 @@ https://practice.course.rs/variables.html
 - scope: defined by block of code that it was declared
 - function: is a named blick of code that is reusable
 - shadowing: allows a var to be re-declared in the same scope with same name
+
+## Data Types
+
+### Integers
+- Signed: postive and negative integers
+- Unsigned interger: always positive
+- Arch: architecture (usually 64bit)
+
+|Length   | Signed   | Unsigned  |
+|---------|----------|-----------|
+|8-bit    |i8        | u8        |
+|16-bit   |i16       | u16       |
+|32-bit   |i32**     | u32       |
+|64-bit   |i64       | u64       |
+|128-bit  |i128      | u128      |
+|arch     |isize     | usize     |
+**default type
+
+
+### Floating Point
+|Length   | type     |
+|---------|----------|
+|32-bit   |i32       |
+|64-bit   |i64**     |
+**default type**
