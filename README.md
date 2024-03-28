@@ -34,4 +34,4 @@ https://practice.course.rs/variables.html
 |---------|----------|
 |32-bit   |i32       |
 |64-bit   |i64**     |
-**default type**
+**default type
