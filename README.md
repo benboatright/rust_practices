@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=BpPEoZW5IiY&t=59s
 Following Rust By Practice 
 https://practice.course.rs/variables.html
 
+test
+
 ## Variables
 - var declaration: use 'let' to declare vars
 - print:  print!() println!() (println!() adds line afterwards)
