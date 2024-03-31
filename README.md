@@ -35,3 +35,15 @@ https://practice.course.rs/variables.html
 |32-bit   |i32       |
 |64-bit   |i64**     |
 **default type
+
+### Char
+- Single character of 
+- Size = 4 bytes
+
+### Bool
+- Boolean value of true or false
+- Size = 1 bytes
+
+### Unit
+- Empty tuple used to return "nothing" in expressions or functions
+- Size = 0 bytes
