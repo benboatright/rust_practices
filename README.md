@@ -47,3 +47,12 @@ https://practice.course.rs/variables.html
 ### Unit
 - Empty tuple used to return "nothing" in expressions or functions
 - Size = 0 bytes
+
+### Statement
+- Instructions that perform some action but do not produce a value
+- Function definitions are statements, as well as code that ends with ";" (usually)
+
+### Expression 
+- Evaluate to a resultant value
+
+### Function
