@@ -8,14 +8,14 @@ https://practice.course.rs/variables.html
 - var declaration: use 'let' to declare vars
 - print:  print!() println!() (println!() adds line afterwards)
 - scope: defined by block of code that it was declared
-- function: is a named blick of code that is reusable
+- function: is a named block of code that is reusable
 - shadowing: allows a var to be re-declared in the same scope with same name
 
 ## Data Types
 
 ### Integers
-- Signed: postive and negative integers
-- Unsigned interger: always positive
+- Signed: positive and negative integers
+- Unsigned integer: always positive
 - Arch: architecture (usually 64bit)
 
 |Length   | Signed   | Unsigned  |
@@ -56,3 +56,9 @@ https://practice.course.rs/variables.html
 - Evaluate to a resultant value
 
 ### Function
+- Block of reusable code that performs a specific tasks
+- Can take arguments, processes those inputs and returns a result
+
+### Diverging functions
+- Never return to the caller
+- E.g. panic, looping forever, quitting the program
