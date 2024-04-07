@@ -11,12 +11,6 @@
 .DS_Store
 desktop.ini
 
-# https://github.com/claymcleod/bitbelay/blob/main/.gitignore
-**/target
-**/Cargo.lock
-
-/*.TAG
-
 ## Editor
 *.swp
 *.swo

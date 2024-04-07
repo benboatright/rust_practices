@@ -85,3 +85,32 @@ https://practice.course.rs/variables.html
             |2     |l         |
             |3     |l         | 
             |4     |o         |
+
+### Copy vs. Move
+- Scalar values with fixed sizes will automatically get copied in the stack because copying is cheap with these values.
+- i.e., the values are different in the stack
+```
+let x = 5 // x is of type i32
+let y = x // 5 gets copied into y (i.e., y is of type i32)
+```
+- Dynamically sized data only gets moved
+```
+let s1 = String::from("hello"); // s1 is a pointer to the heap
+let s2 = s1; // the s1 pointer that is pointing at the value in the heap will get copied to s2
+
+// s2 then becomes the owner and s1 is dropped
+```
+- i.e., s1 and s2 point to the same location in the heap
+
+### Deep Copy
+```
+let s1 = String::from("hello"); // s1 is a pointer to the heap
+let s2 = s1.clone(); // the actual data in heap memory is copied
+
+// s2 then becomes the owner and s1 is dropped
+```
+## So What?
+- Ownership prevents memory safety issues:
+    - Dangling pointers
+    - Double-free: trying to free memory that has already been freed
+    - Memory leaks: not freeing memory that should have been freed
