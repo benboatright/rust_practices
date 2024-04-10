@@ -77,7 +77,95 @@
 // }
 
 //3.
-fn main() {
-    
+// fn main() {
+//     let s: String = gives_ownership();
+//     println!("{}",s);
+// }
+
+// fn gives_ownership() -> String {
+//     let s: String = String::from("hello, world");
+//     // let _s = s.as_bytes();
+//     let _s = s.clone().into_bytes();
+//     s
+// }
+
+//4.
+// fn main() {
+//     let s: String = String::from("hello, world");
+
+//     print_str(s.clone());
+
+//     println!("{}", s);
+// }
+
+// fn print_str(s: String) {
+//     println!("{}",s)
+// }
+
+//5.
+// fn main() {
+//     let x: (i32, i32,(), &str) = (1,2,(),"hello");
+//     let y: (i32, i32,(), &str) = x;
+//     println!("{:?}, {:?}", x, y);
+// }
+
+//Mutability 
+
+//6.
+// fn main() {
+//     let s:String = String::from("hello, ");
+
+//     let mut s1 = s;
+
+//     s1.push_str("world");
+
+//     println!("Success!: s1:{}",s1)
+// }
+
+//7.
+// fn main() {
+//     // Box Integers get allocated to the heap
+//     let x: Box<i32> = Box::new(5);
+
+//     let mut y: Box<i32> = Box::new(1);
+
+//     // Dereference using the star opperator
+//     // access value that was allocated on the heap
+//     // and assign a new value
+//     *y = 4;
+
+//     assert_eq!(*x, 5);
+
+//     println!("Success!");
+// }
+
+
+//Partial Move
+
+//Example
+fn main(){
+    #[derive(Debug)]
+    struct Person {
+        name: String,
+        age: Box<u8>,
+    }
+
+    let person = Person {
+        name: String::from("Alice"),
+        age: Box::new(20),
+    };
+
+    //`name` is moved out of person, but `age` is referenced
+    let Person {name, ref age} = person;
+
+    println!("The person's age is {}",age);
+    println!("The person's name is {}",name);
+
+    //The code below will work because it was referenced
+    println!("The person's age from person struct is {}", person.age);
+
+    //The two lines of code will not work because name was not referenced
+    //println!("The person's name from person struct is {}", person.name);
+    //println!("The person struct is {:?}", person);
 }
 
